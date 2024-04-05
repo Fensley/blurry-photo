@@ -1,0 +1,48 @@
+body{
+ background-color: rgb(100, 95, 95); 
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ height: 100vh;
+}
+
+.parent{
+  
+  background-color: rgb(67, 67, 121);
+  border: 1px solid;
+  height: 500px;
+  width: 500px;
+}
+
+.child{
+  background-color: rgb(146, 98, 98);
+  height: 50%;
+  width: 50%;
+  animation: any-name 1s ease-in forwards infinite alternate;
+
+}
+
+.parent:hover .child{
+ /* transform: translateX(100%);  */
+ animation-play-state: paused;
+
+}
+
+@keyframes any-name{
+  0% {
+    transform: translateX(0);
+    background-color: aqua;
+  }
+  33% {
+    transform: translateY(100%);
+  }
+  66% {
+    background-color: rebeccapurple;
+    transform: translateX(100%) translateY(100%);
+  }
+100% {
+  background-color: bisque;
+  transform: translateX(100%);
+}
+
+}
